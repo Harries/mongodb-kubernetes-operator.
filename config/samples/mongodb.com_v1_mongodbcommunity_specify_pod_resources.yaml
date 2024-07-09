@@ -34,28 +34,28 @@ spec:
             - name: mongod
               resources:
                 limits:
-                  cpu: "0.2"
-                  memory: 250M
+                  cpu: "1"
+                  memory: 4096M
                 requests:
-                  cpu: "0.2"
-                  memory: 200M
+                  cpu: "1"
+                  memory: 2048M
             - name: mongodb-agent
               resources:
                 limits:
                   cpu: "0.2"
-                  memory: 250M
+                  memory: 2048M
                 requests:
                   cpu: "0.2"
-                  memory: 200M
+                  memory: 1024M
           initContainers:
             - name: mongodb-agent-readinessprobe
               resources:
                 limits:
                   cpu: "2"
-                  memory: 200M
+                  memory: 2048M
                 requests:
                   cpu: "1"
-                  memory: 100M
+                  memory: 1024M
 # the user credentials will be generated from this secret
 # once the credentials are generated, this secret is no longer required
 ---
